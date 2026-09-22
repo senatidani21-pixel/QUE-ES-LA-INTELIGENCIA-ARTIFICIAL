@@ -1,0 +1,527 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    transition: 0.4s;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #0b1020;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 40px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* LOGO */
+
+.logo {
+    max-width: 500px;
+}
+
+.logo h1 {
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+
+.logo p {
+    color: #bfc7d9;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00d4ff;
+}
+
+
+/* =========================
+   BOTONES DEL HEADER
+========================= */
+
+.dark-btn {
+    background: #00bfff;
+    color: white;
+
+    border: none;
+    border-radius: 25px;
+
+    padding: 10px 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.dark-btn:hover {
+    transform: scale(1.08);
+}
+
+
+/* BOTÓN MENÚ */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(5, 10, 30, 0.75),
+            rgba(5, 10, 30, 0.85)
+        ),
+        url("imagenes/imagen 3.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* CONTENIDO */
+
+.hero-content {
+    max-width: 850px;
+
+    animation: aparecer 1.2s ease;
+}
+
+.hero h2 {
+    font-size: 50px;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #e1e7f0;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+.btn {
+    background: #00c6ff;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 198, 255, 0.4);
+}
+
+
+/* =========================
+   SECCIÓN
+========================= */
+
+.contenedor {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+
+    font-size: 35px;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjetas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* CARD */
+
+.card {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.7s,
+        transform 0.4s,
+        box-shadow 0.4s;
+}
+
+
+/* CARD APARECE */
+
+.card.mostrar {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* CARD HOVER */
+
+.card:hover {
+    transform: translateY(-12px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+
+/* IMAGEN */
+
+.card img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+
+/* CONTENIDO */
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    color: #008dcc;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #555;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   SECCIÓN FINAL
+========================= */
+
+.futuro {
+    background:
+        linear-gradient(
+            135deg,
+            #07111f,
+            #102c4a
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 90px 20px;
+}
+
+.futuro h2 {
+    font-size: 36px;
+
+    margin-bottom: 20px;
+}
+
+.futuro p {
+    max-width: 800px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    color: #d6deea;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #05080f;
+
+    color: #9ca6b8;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================
+   MODO OSCURO
+========================= */
+
+body.dark-mode {
+    background: #11151c;
+
+    color: white;
+}
+
+body.dark-mode .contenedor {
+    background: #11151c;
+}
+
+body.dark-mode .titulo-seccion {
+    color: white;
+}
+
+body.dark-mode .card {
+    background: #1d232e;
+}
+
+body.dark-mode .card-content p {
+    color: #c5ccd7;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .logo h1 {
+        font-size: 19px;
+    }
+
+    .navbar {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background: #0b1020;
+
+        padding: 25px;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .dark-btn {
+        margin-left: auto;
+
+        margin-right: 15px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .logo p {
+        display: none;
+    }
+
+    .logo h1 {
+        font-size: 16px;
+    }
+
+    .dark-btn {
+        font-size: 11px;
+
+        padding: 8px 10px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-seccion {
+        font-size: 28px;
+    }
+
+}
